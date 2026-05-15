@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #33cbdf;
+      color: whitesmoke;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: black;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 5px solid cyan;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin: 10px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      max-width: 700px;
+    }
+
+    button {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      background: cyan;
+      font-size: 20px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .projects {
+      padding: 50px;
+      text-align: center;
+    }
+
+    .project-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #222;
+      width: 300px;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: black;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media(max-width:768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .menu {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <h2>My Portfolio</h2>
+    <div class="menu">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="hero" id="home">
+    <img src="https://via.placeholder.com/180" alt="Profile Picture">
+    <h1>Subrata Sarkar</h1>
+    <p>
+      I am a frontend web developer learning
+      HTML, CSS and JavaScript.
+    </p>
+    <button>Hire Me</button>
+  </div>
+
+  <div class="projects" id="projects">
+    <h1>My Projects</h1>
+    <div class="project-container">
+      <div class="card">
+        <img src="https://picsum.photos/300?1" alt="Calculator App">
+        <h2>Calculator App</h2>
+        <p>Built using JavaScript.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/300?2" alt="To-Do App">
+        <h2>To-Do App</h2>
+        <p>Task management application.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/300?3" alt="Responsive Website">
+        <h2>Responsive Website</h2>
+        <p>Mobile friendly modern design.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <p>Made with HTML CSS JavaScript 🚀</p>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      // Dark mode toggle functionality
+      document.body.style.backgroundColor = 
+        document.body.style.backgroundColor === 'rgb(51, 203, 223)' ? '#1a1a1a' : '#33cbdf';
+    }
+  </script>
+</body>
+
+</html>
